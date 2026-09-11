@@ -18,10 +18,12 @@ The Frontend sends a request to a Django Backend using JavaScript's `fetch()` fu
 
 ## 📂 Project Structure
 
+```text
 Projekt-fruit_app-Frontend/
 ├── index.html
 ├── script.js
 └── README.md
+```
 
 ## 🔗 Backend
 
@@ -29,11 +31,15 @@ This Frontend communicates with a separate Django Backend.
 
 The Backend provides the following API endpoint:
 
+```text
 GET /fruits/
+```
 
 During local development, the API is available at:
 
+```text
 http://127.0.0.1:8000/fruits/
+```
 
 The Backend repository can be found here:
 
@@ -44,38 +50,42 @@ https://github.com/zohrehhabibidev/Projekt-fruit_app
 
 The basic flow of the application is:
 
+```text
 Browser
-↓
+   ↓
 JavaScript fetch()
-↓
+   ↓
 Django Backend
-↓
+   ↓
 GET /fruits/
-↓
+   ↓
 JSON Response
-↓
+   ↓
 JavaScript
-↓
+   ↓
 HTML
-↓
+   ↓
 Fruit list displayed in the browser
+```
 
 The Backend returns data similar to:
 
+```json
 {
-"fruits": [
-{
-"name": "Apple",
-"color": "Red",
-"weight": 150
-},
-{
-"name": "Banana",
-"color": "Yellow",
-"weight": 120
+  "fruits": [
+    {
+      "name": "Apple",
+      "color": "Red",
+      "weight": 150
+    },
+    {
+      "name": "Banana",
+      "color": "Yellow",
+      "weight": 120
+    }
+  ]
 }
-]
-}
+```
 
 The JavaScript receives this JSON data, extracts the `fruits` array, and renders each fruit into the HTML page.
 
@@ -85,11 +95,15 @@ The JavaScript receives this JSON data, extracts the `fruits` array, and renders
 
 Open the Backend project and run:
 
+```bash
 python manage.py runserver
+```
 
 The Backend should be available at:
 
+```text
 http://127.0.0.1:8000/
+```
 
 ### 2. Start the Frontend
 
@@ -99,7 +113,9 @@ Use the **Live Server** extension to open `index.html`.
 
 The Frontend will normally run on an address similar to:
 
+```text
 http://127.0.0.1:5500/
+```
 
 ### 3. Open the Application
 
